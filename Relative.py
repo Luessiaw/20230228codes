@@ -13,7 +13,8 @@ class Relative:
     # 对象id
     coupleId = -1
 
-    def __init__(self,id,male,age,childList=None,fId=-1,mId=-1,coupleId=-1,filedList=None):
+    def __init__(self,id,male,age,childList=None,fId=-1,mId=-1,coupleId=-1,friendList=None):
+        # 添加了 friendList 参数。
         self.id = id
         self.male = male
         self.age = age
@@ -21,3 +22,10 @@ class Relative:
         self.fId = fId
         self.mId = mId
         self.coupleId = coupleId
+        
+        self.friendList = friendList if friendList != None else []
+        # 上面这行的用法等同于
+        # if friendList != None:
+        #     self.friendList = friendList
+        # else:
+        #     self.friendList = []
